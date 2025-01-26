@@ -3,15 +3,21 @@
 (async () => {
   const fetch = (await import("node-fetch")).default;
 
-  const url = "http://localhost:3000/api/employees";
+  const url = "http://localhost:3000/api/branches/";
 
   const regtrUser = async () => {
-    const name = "arcontroller@climatecontrolsing.com";
-    const position = "obrero negro oscuro";
-    const department = "User1*";
-    const salary = 12233;
-
-    const data = JSON.stringify({ name, position, department, salary });
+    const data = JSON.stringify({
+      id_user:
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjAzNTUwN2IxLWZmNjgtNDFkMi04NjUzLWUwZGU2ZDliYmU4OSIsIm5hbWUiOiJVc2VyMSoiLCJwc3ciOiJQYXNzd0AxIiwiaXNzdWVkQXQiOiIyMDI1LTAxLTI2VDAxOjA0OjI1LjAxM1oiLCJpYXQiOjE3Mzc4NTM0NjUsImV4cCI6MTczNzg1NzA2NSwiaXNzIjoiUm91c2UifQ.UD-WHJUAYlk2EX0m3FCjps6JK3jyxLxi_5aZiLye2ZI",
+      nombre: "matriz",
+      direccion: "av siempre viva 53",
+      telefono: 300272839,
+      email: "ahsy@cci.com",
+      estado: true,
+      fecha_creacion: "hoy",
+      fecha_actualizacion: "pasado anteayer",
+      ubicacion_geografica: { latitud: 300, longitud: 300 },
+    });
 
     const options = {
       method: "POST",

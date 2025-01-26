@@ -33,15 +33,10 @@ export const getEmployeeById = asyncHandler(
 export const createEmployee = asyncHandler(
   async (req: Request, res: Response) => {
     try {
-      console.log("ínto saved", req.body);
       const newEmployee = new Employee(req.body);
-      const saved = await newEmployee.save();
-      console.log(saved);
-
+      await newEmployee.save();
       res.status(201).json(newEmployee);
     } catch (error: any) {
-      console.log("error: ", error);
-
       res.status(400).json({ message: error.message });
     }
   }
