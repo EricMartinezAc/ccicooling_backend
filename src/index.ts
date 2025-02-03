@@ -4,6 +4,10 @@ import mongoose from "mongoose";
 import bodyParser from "body-parser";
 import dotenv from "dotenv";
 import employeeRoutes from "./routes/employeeRoutes";
+
+import areasRoutes from "./routes/areasRoutes";
+import rrffRoutes from "./routes/rrffRoutes";
+
 import branchRoutes from "./routes/branchRoutes";
 
 dotenv.config();
@@ -20,6 +24,8 @@ mongoose
 
 app.use("/api/employees", employeeRoutes);
 app.use("/api/branches", branchRoutes);
+app.use("/api/areas", areasRoutes);
+app.use("/api/rrff", rrffRoutes);
 
 // Middleware para manejo de errores
 app.use((err: Error, req: Request, res: Response, next: NextFunction) => {

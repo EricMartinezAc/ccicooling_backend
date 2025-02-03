@@ -1,5 +1,9 @@
 export interface RRFF {
+  id_user: string;
+  id_branch: string;
+  ids_areas: string[];
   nombre: string;
-  puesto: string;
-  salario: number;
+  tipo: string;
+  state: string;
+  id_ot: string[];
 }

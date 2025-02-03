@@ -1,4 +1,4 @@
-interface Cargo {
+export interface Cargo {
   id_dpto: string;
   nombre: string;
   funciones: string;
