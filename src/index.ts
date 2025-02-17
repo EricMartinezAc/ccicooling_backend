@@ -2,6 +2,7 @@
 import express, { Request, Response, NextFunction } from "express";
 import mongoose from "mongoose";
 import bodyParser from "body-parser";
+import cors from "cors";
 import dotenv from "dotenv";
 import employeeRoutes from "./routes/employeeRoutes";
 
@@ -21,6 +22,15 @@ mongoose
   .connect(process.env.MONGO_URI as string)
   .then(() => console.log("Connected to MongoDB Atlas"))
   .catch((error) => console.error("Error connecting to MongoDB:", error));
+
+app.use(
+  cors({
+    origin: ["http://localhost:3001", "http://otro-origen.com"],
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+    credentials: true,
+  })
+);
 
 app.use("/api/employees", employeeRoutes);
 app.use("/api/branches", branchRoutes);

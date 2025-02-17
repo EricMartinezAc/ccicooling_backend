@@ -7,16 +7,14 @@
 
   const regtrUser = async () => {
     const data = JSON.stringify({
-      id_user:
+      nombre:
         "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjAzNTUwN2IxLWZmNjgtNDFkMi04NjUzLWUwZGU2ZDliYmU4OSIsIm5hbWUiOiJVc2VyMSoiLCJwc3ciOiJQYXNzd0AxIiwiaXNzdWVkQXQiOiIyMDI1LTAxLTI2VDAxOjA0OjI1LjAxM1oiLCJpYXQiOjE3Mzc4NTM0NjUsImV4cCI6MTczNzg1NzA2NSwiaXNzIjoiUm91c2UifQ.UD-WHJUAYlk2EX0m3FCjps6JK3jyxLxi_5aZiLye2ZI",
-      nombre: "matriz",
-      direccion: "av siempre viva 53",
-      telefono: 300272839,
-      email: "ahsy@cci.com",
-      estado: true,
-      fecha_creacion: "hoy",
-      fecha_actualizacion: "pasado anteayer",
-      ubicacion_geografica: { latitud: 300, longitud: 300 },
+      ccosto: "matriz",
+      dimension: "av siempre viva 53",
+      id_dpto: 300272839,
+      id_branch: "ahsy@cci.com",
+      id_user: true,
+      state: "hoy",
     });
 
     const options = {

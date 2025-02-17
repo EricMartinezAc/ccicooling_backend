@@ -9,14 +9,13 @@
     const data = JSON.stringify({
       id_user:
         "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjAzNTUwN2IxLWZmNjgtNDFkMi04NjUzLWUwZGU2ZDliYmU4OSIsIm5hbWUiOiJVc2VyMSoiLCJwc3ciOiJQYXNzd0AxIiwiaXNzdWVkQXQiOiIyMDI1LTAxLTI2VDAxOjA0OjI1LjAxM1oiLCJpYXQiOjE3Mzc4NTM0NjUsImV4cCI6MTczNzg1NzA2NSwiaXNzIjoiUm91c2UifQ.UD-WHJUAYlk2EX0m3FCjps6JK3jyxLxi_5aZiLye2ZI",
-      nombre: "matriz",
-      direccion: "av siempre viva 53",
+      id_branch: "",
+      ids_areas: [],
       telefono: 300272839,
-      email: "ahsy@cci.com",
-      estado: true,
-      fecha_creacion: "hoy",
-      fecha_actualizacion: "pasado anteayer",
-      ubicacion_geografica: { latitud: 300, longitud: 300 },
+      nombre: "AC#1",
+      tipo: "AC",
+      state: true,
+      it_ot: "pasado anteayer",
     });
 
     const options = {
