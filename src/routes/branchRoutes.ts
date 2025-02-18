@@ -2,6 +2,7 @@
 import { Router } from "express";
 import {
   getAllBranches,
+  getAllBranchesByUser,
   getBranchById,
   createBranch,
   updateBranch,
@@ -11,6 +12,7 @@ import {
 const router = Router();
 
 router.get("/", getAllBranches);
+router.post("/getAllBranchesByUser", getAllBranchesByUser);
 router.get("/:id", getBranchById);
 router.post("/", createBranch);
 router.put("/:id", updateBranch);

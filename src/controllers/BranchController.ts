@@ -17,6 +17,18 @@ export const getAllBranches = asyncHandler(
   }
 );
 
+export const getAllBranchesByUser = asyncHandler(
+  async (req: Request, res: Response) => {
+    const token: string = req.body.token;
+    try {
+      const branches = await Branch.find();
+      res.status(200).json(branches);
+    } catch (error: any) {
+      res.status(500).json({ message: error.message });
+    }
+  }
+);
+
 export const getBranchById = asyncHandler(
   async (req: Request, res: Response) => {
     try {
